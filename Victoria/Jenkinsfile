@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        CI = true
+    }
     stages {
         stage('Install dependencies') {
             steps {
@@ -11,20 +14,20 @@ pipeline {
                 sh 'npm audit fix'
             }
         }
-        // stage('Test application') {
-        //     steps {
-        //         sh 'npm run test'
-        //     }
-        // }
+        stage('Test application') {
+            steps {
+                sh 'npm test'
+            }
+        }
         stage('Build application') {
             steps {
                 sh 'npm run build'
             }
         } 
-        stage('Deploy') {
-            steps {
-                sh 'serve -s build'
-            }
-        }
+        // stage('Deploy') {
+        //     steps {
+        //         sh 'serve -s build'
+        //     }
+        // }
     }
 }
