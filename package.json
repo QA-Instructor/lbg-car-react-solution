@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.9.3",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
     "react": "^16.8.6",
     "react-csv": "^1.1.1",
     "react-dom": "^16.8.6",
