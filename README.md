@@ -1,3 +1,6 @@
+This project demonstrates how to Login to a backend with a username/password and then use the JWT returned in the response Authorization header. The JWT is added to Session Storage and added as an Authorization Header in each request to the backend.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
