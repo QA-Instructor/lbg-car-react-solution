@@ -8,10 +8,10 @@ import TextField from '@material-ui/core/TextField';
 
 const EditCar = (props) => {
   const [open, setOpen] = useState(false);
-  const [car, setCar] = useState({brand: '', model: '', year: '', color: '', price: ''});
+  const [car, setCar] = useState({brand: '', model: '', year: '', colour: '', price: ''});
 
   const handleClickOpen = () => {
-    setCar({brand: props.car.brand, model: props.car.model, color: props.car.color,
+    setCar({brand: props.car.brand, model: props.car.model, colour: props.car.colour,
       year: props.car.year, fuel: props.car.fuel, price: props.car.price })
     setOpen(true);
   }
@@ -40,8 +40,8 @@ const EditCar = (props) => {
                 value={car.brand} onChange={handleChange}/> 
               <TextField fullWidth label="Model" name="model" 
                 value={car.model} onChange={handleChange}/>
-              <TextField fullWidth label="Color" name="color" 
-                value={car.color} onChange={handleChange}/>
+              <TextField fullWidth label="Colour" name="colour" 
+                value={car.colour} onChange={handleChange}/>
               <TextField fullWidth label="Year" name="year" 
                 value={car.year} onChange={handleChange}/>
               <TextField fullWidth label="Price" name="price" 

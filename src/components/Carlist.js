@@ -39,7 +39,7 @@ class Carlist extends Component {
 
   // Delete car
   onDelClick = (link) => {
-    if (window.confirm('Are you sure to delete?')) {
+    if (window.confirm('Are you sure you want to delete?')) {
       const token = sessionStorage.getItem("jwt");
       fetch(link, 
       { 
@@ -108,13 +108,13 @@ class Carlist extends Component {
       Header: 'Model',
       accessor: 'model',
     }, {
-      Header: 'Color',
-      accessor: 'color',
+      Header: 'Colour',
+      accessor: 'colour',
     }, {
       Header: 'Year',
       accessor: 'year',
     }, {
-      Header: 'Price €',
+      Header: 'Price £',
       accessor: 'price',
     }, {
       sortable: false,
